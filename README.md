@@ -35,6 +35,8 @@ Run the `install/setup.sh` script to setup the environment:
 ./setup.sh
 ```
 
+The relative/inheritable path matcher functionality now allows us to expose the same application on different domains with different paths, using the same child HTTPRoute. This is possible, as can be seen in the [httpbin-httproute.yaml](./routes/httpbin-httproute.yaml) file, in which we've set the `delegation.gateway.solo.io/inherit-parent-matcher: "true"` annotation to enable the relative/inheritable matcher functionality.
+
 ## Access the HTTPBin application
 
 
